@@ -14,6 +14,7 @@ def main():
     kk_img = pg.image.load("fig/3.png") #練習２前半
     kk_img = pg.transform.flip(kk_img,True,False) #練習２後半
     kk_rct = kk_img.get_rect()#続き５の１
+    kk_rct.center = 300,200#続き５の２
     tmr = 0
     while True:
         for event in pg.event.get():
