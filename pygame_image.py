@@ -18,22 +18,30 @@ def main():
 
 
     tmr = 0
+
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
         x = tmr    
+        y = 0
+        z = 0
 
         key_lst = pg.key.get_pressed()#続き５の３
         if key_lst[pg.K_UP]:
-            kk_rct.move_ip((0,-1))#続き５の4
-        if key_lst[pg.K_LEFT]:
-            kk_rct.move_ip((-1,0))#続き５の4
-        if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((2,0))#続き５の4
+            z = -1
+        
         if key_lst[pg.K_DOWN]:
-            kk_rct.move_ip((0,1))#続き５の4
-        kk_rct.move_ip((-1,0))
+            z = 1
+            
+        if key_lst[pg.K_RIGHT]:
+            y = 2
+           
+        if key_lst[pg.K_LEFT]:
+            y = -1       
+
+        kk_rct.move_ip((-1+y,0+z))
+
 
         screen.blit(bg_img,[-x,0])
         screen.blit(bg_img2, [-x+1600,0])#続き３
