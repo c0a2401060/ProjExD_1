@@ -19,6 +19,13 @@ def main():
     key_lst = pg.key.get_pressed()
     if key_lst[pg.K_UP]:
         kk_rct.move_ip((0,-1))#続き５の３
+    if key_lst[pg.K_LEFT]:
+        kk_rct.move_ip((0,-1))#続き５の３
+    if key_lst[pg.K_RIGHT]:
+        kk_rct.move_ip((0,-1))#続き５の３
+    if key_lst[pg.K_DOWN]:
+        kk_rct.move_ip((0,-1))#続き５の３
+
 
     tmr = 0
     while True:
