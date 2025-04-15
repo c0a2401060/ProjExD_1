@@ -30,11 +30,12 @@ def main():
         if key_lst[pg.K_LEFT]:
             kk_rct.move_ip((-1,0))#続き５の4
         if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((1,0))#続き５の4
+            kk_rct.move_ip((2,0))#続き５の4
         if key_lst[pg.K_DOWN]:
             kk_rct.move_ip((0,1))#続き５の4
+        kk_rct.move_ip((-1,0))
 
-        screen.blit(bg_img, [-x,0])
+        screen.blit(bg_img,[-x,0])
         screen.blit(bg_img2, [-x+1600,0])#続き３
         screen.blit(bg_img, [-x+3200,0])#続き4
         #screen.blit(kk_img, [300, 200]) #練習３
